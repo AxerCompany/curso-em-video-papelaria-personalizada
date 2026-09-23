@@ -1,0 +1,6 @@
+{
+  "name": "Método Montagem Perfeita - Papelaria Personalizada",
+  "description": "Página oficial de upsell e treinamento exclusivo de montagem profissional de personalizados para quem adquiriu moldes digitais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -222,9 +222,9 @@ export const CourseCurriculum: React.FC = () => {
             </div>
             <div className="bg-white/10 rounded-xl p-4 border border-white/10">
               <span className="text-xs font-mono font-bold text-[#F472B6] bg-pink-900/50 px-2 py-0.5 rounded">BÔNUS 02</span>
-              <h5 className="font-bold text-white text-base mt-2 mb-1">Lista de Fornecedores Secretos</h5>
+              <h5 className="font-bold text-white text-base mt-2 mb-1">Estratégias para Instagram</h5>
               <p className="text-xs text-purple-100 leading-relaxed">
-                Onde comprar papéis fotográficos, fitas de cetim e strass no atacado com frete rápido e preço até 40% menor.
+                Ideias práticas para divulgar e vender mais.
               </p>
             </div>
           </div>

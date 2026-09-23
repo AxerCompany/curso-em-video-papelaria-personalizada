@@ -15,7 +15,6 @@ import { GuaranteeSection } from './components/GuaranteeSection';
 import { FinalCTA } from './components/FinalCTA';
 import { CheckoutModal } from './components/CheckoutModal';
 import { ExitIntentModal } from './components/ExitIntentModal';
-import { StickyBottomBar } from './components/StickyBottomBar';
 
 export default function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -119,9 +118,6 @@ export default function App() {
           </div>
         </div>
       </footer>
-
-      {/* Sticky Bottom Bar with 15% mobile cap constraint */}
-      <StickyBottomBar onCtaClick={handleOpenCheckout} />
 
       {/* Modais Interativos */}
       <CheckoutModal

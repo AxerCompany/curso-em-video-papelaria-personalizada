@@ -36,7 +36,7 @@ export const MechanismUpsell: React.FC = () => {
           {/* DOBRA 05 Headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4 text-balance">
             Esse é o método secreto já fez mais de{' '}
-            <span className="text-[#F472B6]">2.000 mulheres faturarem</span> com papelaria personalizada do zero e sem experiencia nenhuma.
+            <span className="text-[#F472B6]">1.000 mulheres faturarem</span> com papelaria personalizada do zero e sem experiencia nenhuma.
           </h2>
 
           {/* DOBRA 05 Sub-statement */}
@@ -80,7 +80,7 @@ export const MechanismUpsell: React.FC = () => {
             {/* Quick stats ribbon */}
             <div className="grid grid-cols-3 gap-2 mt-4 text-center">
               <div className="bg-white/10 rounded-xl p-2.5 border border-white/10">
-                <p className="text-lg sm:text-xl font-bold text-[#F472B6] font-mono tabular-nums">+2.000</p>
+                <p className="text-lg sm:text-xl font-bold text-[#F472B6] font-mono tabular-nums">+1.000</p>
                 <p className="text-[11px] text-purple-200">Alunas Ativas</p>
               </div>
               <div className="bg-white/10 rounded-xl p-2.5 border border-white/10">

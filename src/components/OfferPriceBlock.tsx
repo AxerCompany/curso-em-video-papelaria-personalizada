@@ -4,9 +4,10 @@ import { WiapyUpsell } from './WiapyUpsell';
 
 interface OfferPriceBlockProps {
   onCtaClick: () => void;
+  onRefusalClick?: () => void;
 }
 
-export const OfferPriceBlock: React.FC<OfferPriceBlockProps> = ({ onCtaClick }) => {
+export const OfferPriceBlock: React.FC<OfferPriceBlockProps> = ({ onCtaClick, onRefusalClick }) => {
   return (
     <section id="oferta" className="w-full bg-[#F8F8F8] text-slate-900 py-16 px-4 relative">
       <div className="max-w-4xl mx-auto">
@@ -104,7 +105,7 @@ export const OfferPriceBlock: React.FC<OfferPriceBlockProps> = ({ onCtaClick }) 
 
                 {/* DOBRA 09 — WIAPY 1-CLICK UPSELL CONTAINER */}
                 <div className="mt-4">
-                  <WiapyUpsell elementId="wiapy_upsell" />
+                  <WiapyUpsell elementId="wiapy_upsell" onRefusalClick={onRefusalClick} />
                 </div>
 
                 <p className="text-[11px] text-slate-500 mt-2.5 flex items-center justify-center gap-1">

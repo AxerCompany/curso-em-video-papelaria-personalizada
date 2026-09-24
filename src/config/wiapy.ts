@@ -12,7 +12,7 @@ export const wiapyConfig = {
     fontSize: '17px',
     borderRadius: '10px',
   },
-  refusalLinkUrl: 'https://wiapy.com/login',
+  refusalLinkUrl: 'https://upsell-papelaria.vercel.app/',
   refusalLinkText: 'Recusar está oferta',
   refusalLinkColor: '#000000',
 };

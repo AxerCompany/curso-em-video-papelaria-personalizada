@@ -103,7 +103,10 @@ export default function App() {
         <ComparisonSection onCtaClick={handleScrollToOffer} />
 
         {/* DOBRA 08 (Oferta / Preço) + DOBRA 09 (Botão de Compra Wiapy 1-Click) */}
-        <OfferPriceBlock onCtaClick={handleScrollToOffer} />
+        <OfferPriceBlock
+          onCtaClick={handleScrollToOffer}
+          onRefusalClick={handleDeclineClick}
+        />
 
         {/* DOBRA 10: Garantia */}
         <GuaranteeSection />
@@ -143,7 +146,6 @@ export default function App() {
       <ExitIntentModal
         isOpen={isExitIntentOpen}
         onClose={() => setIsExitIntentOpen(false)}
-        onAccept={handleFinalAccept}
         onConfirmDecline={handleConfirmDecline}
       />
     </div>

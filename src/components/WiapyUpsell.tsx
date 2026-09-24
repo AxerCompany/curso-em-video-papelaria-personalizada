@@ -27,6 +27,7 @@ interface WiapyUpsellProps {
   customLinkUrl?: string;
   customRefusalUrl?: string;
   customRefusalColor?: string;
+  onRefusalClick?: () => void;
 }
 
 export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({
@@ -35,6 +36,7 @@ export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({
   customLinkUrl,
   customRefusalUrl,
   customRefusalColor,
+  onRefusalClick,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const initializedRef = useRef(false);
@@ -75,6 +77,28 @@ export const WiapyUpsell: React.FC<WiapyUpsellProps> = ({
       }
     };
   }, [elementId, customLinkUrl, customRefusalUrl, customRefusalColor]);
+
+  // Intercept refusal link click inside Wiapy container to trigger onRefusalClick
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || !onRefusalClick) return;
+
+    const handleClickCapture = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      const anchor = target?.closest('a');
+      if (anchor && container.contains(anchor)) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        onRefusalClick();
+      }
+    };
+
+    container.addEventListener('click', handleClickCapture, true);
+    return () => {
+      container.removeEventListener('click', handleClickCapture, true);
+    };
+  }, [onRefusalClick]);
 
   return (
     <div className={`wiapy-container-wrapper w-full ${className}`}>

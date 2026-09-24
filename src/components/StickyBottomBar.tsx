@@ -51,7 +51,7 @@ export const StickyBottomBar: React.FC<StickyBottomBarProps> = ({ onCtaClick }) 
           onClick={onCtaClick}
           className="bg-[#EC4899] hover:bg-[#db2777] text-white font-black text-xs sm:text-sm py-2 sm:py-2.5 px-4 sm:px-6 rounded-xl shadow-lg transition-all transform active:scale-95 whitespace-nowrap shrink-0 flex items-center gap-1.5 cursor-pointer"
         >
-          <span>LIBERAR ACESSO</span>
+          <span>LIBERAR ACESSO AGORA</span>
           <ArrowRight className="w-4 h-4 hidden sm:inline" />
         </button>
       </div>

@@ -4,8 +4,8 @@
  * basta atualizar a propriedade linkUrl abaixo.
  */
 export const wiapyConfig = {
-  linkUrl: 'https://pay.wiapy.com/checkout/undefined',
-  linkText: 'SIM, EU ACEITO ESSA OFERTA',
+  linkUrl: 'https://pay.wiapy.com/6ab46ae901930be2bf677e62',
+  linkText: 'LIBERAR ACESSO AGORA',
   styles: {
     backgroundColor: '#00d769',
     hoverBackgroundColor: '#00b85a',

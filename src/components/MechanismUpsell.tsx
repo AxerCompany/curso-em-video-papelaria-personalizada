@@ -30,12 +30,12 @@ export const MechanismUpsell: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-pink-300 bg-white/10 px-3 py-1 rounded-full mb-3 border border-pink-500/30">
             <Sparkles className="w-4 h-4 text-[#F472B6]" />
-            Método Validado na Prática
+            Curso Validado na Prática
           </div>
 
           {/* DOBRA 05 Headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4 text-balance">
-            Esse é o método secreto já fez mais de{' '}
+            Esse curso já fez mais de{' '}
             <span className="text-[#F472B6]">1.000 mulheres faturarem</span> com papelaria personalizada do zero e sem experiencia nenhuma.
           </h2>
 
@@ -97,7 +97,7 @@ export const MechanismUpsell: React.FC = () => {
           {/* Mechanism explanation points */}
           <div className="lg:col-span-7 space-y-4">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-              Por que esse método funciona mesmo sem talento prévio?
+              Por que esse curso funciona mesmo sem talento prévio?
             </h3>
             <p className="text-sm text-purple-200 leading-relaxed mb-4">
               Montar papelaria personalizada não é dom ou sorte artística. É pura sequência geométrica e mecânica correta. Quando você assiste na sua tela o movimento exato das mãos, o cérebro reproduz instantaneamente.

@@ -21,9 +21,24 @@ export default function App() {
   const [isExitIntentOpen, setIsExitIntentOpen] = useState(false);
   const [declinedOrderState, setDeclinedOrderState] = useState(false);
 
-  const handleOpenCheckout = () => {
+  const handleScrollToOffer = () => {
     setIsExitIntentOpen(false);
-    setIsCheckoutOpen(true);
+    const wiapyElement = document.getElementById('wiapy_upsell');
+    if (wiapyElement) {
+      wiapyElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleFinalAccept = () => {
+    setIsExitIntentOpen(false);
+    const wiapyBtn = document.getElementById('wiapy_upsell')?.querySelector<HTMLButtonElement>('button');
+    if (wiapyBtn && !wiapyBtn.disabled) {
+      wiapyBtn.click();
+    } else {
+      handleScrollToOffer();
+    }
   };
 
   const handleDeclineClick = () => {
@@ -69,11 +84,11 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#5B2A86] text-slate-900 font-sans selection:bg-[#EC4899] selection:text-white">
       {/* Top Bar / DOBRA 01: Urgência e Interrupção de Padrão */}
-      <UrgencyHeader onCtaClick={handleOpenCheckout} />
+      <UrgencyHeader onCtaClick={handleScrollToOffer} />
 
       <main className="flex-1">
         {/* DOBRA 02 (Headline Principal) + DOBRA 03 (Subheadline / Promessa) */}
-        <HeroHeadline onCtaClick={handleOpenCheckout} />
+        <HeroHeadline onCtaClick={handleScrollToOffer} />
 
         {/* DOBRA 04: Bloco de Dor */}
         <PainBlock />
@@ -85,17 +100,17 @@ export default function App() {
         <CourseCurriculum />
 
         {/* DOBRA 07: Comparação Sem / Com */}
-        <ComparisonSection onCtaClick={handleOpenCheckout} />
+        <ComparisonSection onCtaClick={handleScrollToOffer} />
 
-        {/* DOBRA 08 (Oferta / Preço) + DOBRA 09 (Botão de Compra "LIBERAR ACESSO") */}
-        <OfferPriceBlock onCtaClick={handleOpenCheckout} />
+        {/* DOBRA 08 (Oferta / Preço) + DOBRA 09 (Botão de Compra Wiapy 1-Click) */}
+        <OfferPriceBlock onCtaClick={handleScrollToOffer} />
 
         {/* DOBRA 10: Garantia */}
         <GuaranteeSection />
 
         {/* DOBRA 11 (CTA Final) + DOBRA 12 (Recusa) */}
         <FinalCTA
-          onAccept={handleOpenCheckout}
+          onAccept={handleFinalAccept}
           onDecline={handleDeclineClick}
         />
       </main>
@@ -104,7 +119,7 @@ export default function App() {
       <footer className="bg-[#291040] text-purple-200/70 py-8 px-4 text-center text-xs border-t border-purple-900/50">
         <div className="max-w-4xl mx-auto space-y-2">
           <p className="font-semibold text-purple-100">
-            Método Montagem Perfeita · Papelaria Personalizada de Alto Padrão
+            Curso Montagem Perfeita · Papelaria Personalizada de Alto Padrão
           </p>
           <p className="text-[11px] text-purple-300/60">
             Todos os direitos reservados. Este produto não garante a obtenção de resultados sem a dedicação e prática das técnicas ensinadas.
@@ -128,7 +143,7 @@ export default function App() {
       <ExitIntentModal
         isOpen={isExitIntentOpen}
         onClose={() => setIsExitIntentOpen(false)}
-        onAccept={handleOpenCheckout}
+        onAccept={handleFinalAccept}
         onConfirmDecline={handleConfirmDecline}
       />
     </div>

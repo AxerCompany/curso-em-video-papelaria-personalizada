@@ -53,7 +53,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                     Upsell Exclusivo
                   </p>
                   <p className="text-sm font-semibold text-slate-800">
-                    Curso Método Montagem Perfeita + Todos os Bônus
+                    Curso Montagem Perfeita + Todos os Bônus
                   </p>
                 </div>
                 <div className="text-right">

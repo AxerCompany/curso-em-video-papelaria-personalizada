@@ -1,5 +1,6 @@
 import React from 'react';
 import { Zap, Lock, CreditCard, QrCode } from 'lucide-react';
+import { WiapyUpsell } from './WiapyUpsell';
 
 interface OfferPriceBlockProps {
   onCtaClick: () => void;
@@ -47,7 +48,7 @@ export const OfferPriceBlock: React.FC<OfferPriceBlockProps> = ({ onCtaClick }) 
               {/* Left Column: What you receive */}
               <div className="md:col-span-7 space-y-3.5">
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#5B2A86]">
-                  Método Montagem Perfeita de Personalizados
+                  Curso Montagem Perfeita de Personalizados
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600">
                   Acesso imediato e vitalício a todas as videoaulas práticas em alta definição + suporte às dúvidas.
@@ -101,13 +102,10 @@ export const OfferPriceBlock: React.FC<OfferPriceBlockProps> = ({ onCtaClick }) 
                   </p>
                 </div>
 
-                {/* DOBRA 09 — BOTÃO DE COMPRA */}
-                <button
-                  onClick={onCtaClick}
-                  className="w-full mt-4 bg-[#EC4899] hover:bg-[#db2777] text-white font-black text-lg sm:text-xl py-4 px-6 rounded-xl shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer animate-pulse-glow"
-                >
-                  LIBERAR ACESSO
-                </button>
+                {/* DOBRA 09 — WIAPY 1-CLICK UPSELL CONTAINER */}
+                <div className="mt-4">
+                  <WiapyUpsell elementId="wiapy_upsell" />
+                </div>
 
                 <p className="text-[11px] text-slate-500 mt-2.5 flex items-center justify-center gap-1">
                   <Lock className="w-3.5 h-3.5 text-emerald-600" />

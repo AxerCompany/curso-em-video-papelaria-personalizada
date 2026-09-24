@@ -37,7 +37,7 @@ export const StickyBottomBar: React.FC<StickyBottomBarProps> = ({ onCtaClick }) 
           </div>
           <div>
             <p className="text-xs sm:text-sm font-bold text-white truncate">
-              Método Montagem Perfeita
+              Curso Montagem Perfeita
             </p>
             <p className="text-[10px] sm:text-xs text-pink-300 font-semibold">
               De <span className="line-through text-purple-300">R$ 197</span> por apenas{' '}

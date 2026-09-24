@@ -33,7 +33,7 @@ export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onCtaClick
             A decisão que vai definir o futuro dos seus personalizados
           </h2>
           <p className="text-sm sm:text-base text-purple-200">
-            Veja a diferença entre tentar na tentativa e erro versus ter o método profissional nas mãos:
+            Veja a diferença entre tentar na tentativa e erro versus ter o curso profissional nas mãos:
           </p>
         </div>
 
